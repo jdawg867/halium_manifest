@@ -23,65 +23,48 @@ Describe what this manifest update or merge does:
 ```bash
 git fetch aosp android-XX.X.X_rXX
 git merge aosp/android-XX.X.X_rXX --allow-unrelated-histories
-Conflicts Encountered:
+```
 
- default.xml
-
- snippets/halium-15.xml
-
- system/core/init
-
- build/make
-
- vendor/halium/hybris
-
- Other: (list below)
+**Conflicts Encountered:**
+- [ ] `default.xml`
+- [ ] `snippets/halium-15.xml`
+- [ ] `system/core/init`
+- [ ] `build/make`
+- [ ] `vendor/halium/hybris`
+- [ ] Other: (list below)
 
 Provide a short explanation of how each conflict was resolved.
 
-🧪 Validation
-Checklist:
+---
 
- XML passes xmllint --noout default.xml
+## 🧪 Validation
 
- repo sync completes successfully
+**Checklist:**
+- [ ] XML passes `xmllint --noout default.xml`
+- [ ] `repo sync` completes successfully
+- [ ] Verified basic build targets (`make -j16 bootimage`)
+- [ ] Halium projects (`vendor/halium/hybris`, `external/libhybris`, etc.) sync correctly
 
- Verified basic build targets (make -j16 bootimage)
-
- Halium projects (vendor/halium/hybris, external/libhybris, etc.) sync correctly
-
-Test Device(s):
-List any devices you synced or built against (optional)
-
-📋 Notes / Additional Context
-Add any notes, observations, or follow-up tasks (e.g. AIDL HAL updates, init JSON patches).
-
-Maintainer Guidance:
-
-If this merge passes validation, tag and close with a summary comment:
-
-bash
-Copy code
-✅ Merge completed successfully.
-Conflicts resolved: default.xml, build/make
-Tests: repo sync OK, bootimage compiled
-Optionally tag the release:
-
-bash
-Copy code
-git tag -a v15.0.1 -m "Merged AOSP android-15.0.0_rXX"
-git push --tags
-yaml
-Copy code
+**Test Device(s):**
+_List any devices you synced or built against (optional)_
 
 ---
 
-### ✅ How to add this
+## 📋 Notes / Additional Context
 
-```bash
-mkdir -p .github/ISSUE_TEMPLATE
-nano .github/ISSUE_TEMPLATE/manifest_update.md
-# paste the file above
-git add .github/ISSUE_TEMPLATE/manifest_update.md
-git commit -m "Add issue template for manifest updates and AOSP merges"
-git push
+_Add any notes, observations, or follow-up tasks (e.g. AIDL HAL updates, init JSON patches)._
+
+---
+
+> **Maintainer Guidance:**
+> - If this merge passes validation, tag and close with a summary comment:
+>   ```bash
+>   ✅ Merge completed successfully.
+>   Conflicts resolved: default.xml, build/make
+>   Tests: repo sync OK, bootimage compiled
+>   ```
+> - Optionally tag the release:
+>   ```bash
+>   git tag -a v15.0.1 -m "Merged AOSP android-15.0.0_rXX"
+>   git push --tags
+>   ```
