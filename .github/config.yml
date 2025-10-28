@@ -1,0 +1,22 @@
+# GitHub Issue Template Configuration
+# This file controls how templates appear when creating new issues.
+
+blank_issues_enabled: false  # Prevents users from opening empty issues
+
+contact_links:
+  - name: 📘 Documentation / Contributing Guide
+    url: https://github.com/<yourname>/android/blob/master/.github/CONTRIBUTING.md
+    about: Read the full contributing workflow, branch policy, and merge instructions.
+
+issue_templates:
+  - name: "Manifest Update / AOSP Merge"
+    description: Track merges, rebases, or syncs between Halium and AOSP versions
+    title: "[Manifest Update] Merge AOSP android-XX.X.X_rXX into dev/android-15"
+    labels: ["manifest-update", "merge-request"]
+    assignees: []
+
+  - name: "Device or Feature Request"
+    description: Propose a new device tree, vendor overlay, or feature addition
+    title: "[Feature] Add <device/feature-name>"
+    labels: ["feature-request", "enhancement"]
+    assignees: []
