@@ -106,7 +106,7 @@ open a GitHub Discussion or Issue first to coordinate work and prevent conflicts
 
 - **Base:** AOSP 15.0.0_r36  
 - **Halium lineage:** halium-12.0 → halium-15.0 → halium-16.0  
-- **Maintainer:** James M. Freeman
+- **Maintainer:** *<Your Name>*
 
 ---
 
